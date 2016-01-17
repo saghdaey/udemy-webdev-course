@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning Javascript</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <!--in line javascript example-->
+   <!-- <button onclick="alert('Hi')">Click me!</button> !-->
+
+    <button id="textChanger">Change first div text</button>
+    <div id="firstDiv">Here is some text.</div>
+    <button id="myButton">You know you want to click me..</button>
+    <button id="textAppender">Append some text.</button>
+    <div id="secondDiv">Javascript is... </div>
+    <button id="textCreator">Let's create some text</button>
+    <div id="emptyDiv"></div>
+    <!--we can write javascript code within script tags!-->
+    <!--convention to write script tag within head or right before /body!-->
+
+    <script type="text/javascript">
+        //alert =popup, when page loads
+        //alert("page loaded")
+        //document: refers to whole pg
+        //if we .innerHTML, we change content of whats written
+        
+        //change HTML
+        document.getElementById("textChanger").onclick=function(){
+            document.getElementById("firstDiv").innerHTML="Look! I changed. This is awesome.";
+        }
+
+        //pop up on click
+        document.getElementById("myButton").onclick=function(){
+            alert("don't you hate pop ups?");
+        }
+
+        //append text
+        document.getElementById("textAppender").onclick=function(){
+            document.getElementById("secondDiv").innerHTML=document.getElementById("secondDiv").innerHTML + "great!";
+        }
+
+        //create HTML
+        document.getElementById("textCreator").onclick=function(){
+            //document.getElementById("emptyDiv").innerHTML="hi";
+            //you can type HTML after this function
+            document.getElementById("emptyDiv").innerHTML="<ul><li>Cat</li></ul><ul><li>Dog</li></ul><ul><li>Mouse</li></ul>"
+        }
+    </script>    
+        <!--//create variable in Javascript
+        //var variablename="value";
+        //input can also act as variable -->
+    <input id="myInput" type="text"/>
+    <button id="inputFun">Echo</button>
+    <script>
+        document.getElementById("inputFun").onclick=function(){
+            alert(document.getElementById("myInput").value);
+        }
+    </script>
+
+</body>
+</html>
