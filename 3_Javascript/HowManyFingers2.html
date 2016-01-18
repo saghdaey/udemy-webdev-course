@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <title>How Many Fingers2?</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<!--user inputs a number. computer guesses until its right -->
+
+<body>
+    <p>How many fingers are you holding up?</p>
+    <input id="number"/>
+    <button id="guess">Guess</button>
+    <script type="text/javascript">
+    
+    document.getElementById("guess").onclick=function(){
+        if(document.getElementById("number").value>5 || document.getElementById("number").value<0){
+            alert("please enter 1,2,3,4,or 5");
+            return;
+        }
+        var gotit=false; //boolean, set initially to false
+        var numGuesses=1;
+        var x; //x will be computers guess
+        while(gotit==false){
+            x=Math.random(); 
+            x=6*x;
+            x=Math.floor(x); 
+            //alert(x);
+            //document.getElementById("number").value = user's inputted value
+            if(document.getElementById("number").value==x){
+                gotit=true;
+            }
+            else{
+                numGuesses++; //when computer gets it wrong, increment
+            }    
+        }
+        if(numGuesses!=1){
+            alert("Got it! It was a " +x+ ". It only took me " + numGuesses + " guesses!" );
+        }else{
+            alert("Got it! It was a " +x+ ". It only took me 1 guess!");
+        }
+    }
+    </script>
+
+</body>
+</html>
