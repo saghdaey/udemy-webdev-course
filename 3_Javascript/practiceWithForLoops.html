@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <title>Loop Practice</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+
+<body>
+
+	<p id="arrayString"></p>
+	<p id="arrayString2"></p>
+
+	<!--for loops-->
+	    <script type="text/javascript">
+	    /*for(var i=1; i<5;i++){
+	        alert(i); //will alert 1, 2, 3, then 4
+	    }*/
+
+	    var myArray=["pizza","chocolate", "crisps"];
+	    for(var i=0; i<myArray.length;i++){
+	    	alert(myArray[i]);
+	    }
+
+	    var arrayString="";
+	    for(var i=0; i<myArray.length;i++){
+	    	arrayString=arrayString+myArray[i]+" ";
+	    }
+	    document.getElementById("arrayString").innerHTML=arrayString;
+
+    </script>
+    
+    <!--while loops-->
+    <script type="text/javascript">
+    	var myArray2=["water", "juice", "coffee"];
+    	var arrayString2="";
+    	i=0;
+    	while(i<myArray2.length){
+    		arrayString2=arrayString2+myArray2[i]+" ";
+    		i++;
+    	}
+    	document.getElementById("arrayString2").innerHTML=arrayString2;
+
+    </script>
+
+
+</body>
+</html>
