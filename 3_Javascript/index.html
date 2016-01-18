@@ -106,7 +106,36 @@
         myOtherArray.splice(1,0,"sunshine");
         console.log(myOtherArray);
 
+    </script>
 
+    <!--IF lectures--> 
+    <script type="text/javascript">
+    //basic example..just like java  
+        var x=2;
+        if(x==1){
+            alert("x is 1");
+        } else {
+            alert("x is not 1")
+        } 
+    </script>
+
+
+    <br/><br><p>if statements</p>
+    <!--if statements can be used to interact with the user-->
+    <p>What is the weather?</p>
+    <input id="weather"/>
+    <button id="weatherButton">Submit</button>
+    <script type="text/javascript">
+        document.getElementById("weatherButton").onclick=function(){
+            if(document.getElementById("weather").value=="rain"){
+                alert("it's raining.");
+            }
+            else{
+                alert("it's not raining.")
+            }
+        }
+
+        //note issue here: if statement is case sensitive also wouldnt read raining etc.. 
     </script>
 
 </body>
