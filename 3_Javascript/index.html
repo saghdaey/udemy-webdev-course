@@ -52,7 +52,7 @@
         <!--//create variable in Javascript
         //var variablename="value";
         //input can also act as variable -->
-
+    <br/>
     <p>practice with variables</p>
     <input id="myInput" type="text" placeholder="type something"/>
     <button id="inputFun">Echo</button>
@@ -61,6 +61,7 @@
             alert(document.getElementById("myInput").value);
         }
     </script>
+    <br/><br/>
     <p>more practice with variables</p>
     <input id="myInput2" type="text" value="Replace Me"/>
     <button id="inputFun2">Press Me!</button>
@@ -68,6 +69,17 @@
         document.getElementById("inputFun2").onclick=function(){
             document.getElementById("myInput2").value="JOON!!";
         }
+    </script>
+
+    <br/><br/>
+    <p> array section</p>
+    <button id="stylesChanger">Change the text!</button>
+    <div id="firstDiv">This is some text</div>
+    <script>
+        //initialize array
+        var myArray=new Array();
+        myArray[0]="pizza";
+        myArray[1]="chocolate";
     </script>
 
 </body>
