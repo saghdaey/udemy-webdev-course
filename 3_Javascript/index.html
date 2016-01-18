@@ -88,6 +88,19 @@
         document.getElementById("stylesChanger").onclick=function(){
             document.getElementById("thirdDiv").innerHTML=myArray[0];
         }
+
+        //another way to initialize array (just like java)
+        myOtherArray=["rain","sunshine"];
+        //add to array: push (appends to end)
+        myOtherArray.push("snow");
+        //array becomes: "rain", "sunshine", "snow"
+
+        //splice(a,b) removes starting from number a, b number of elements from the array
+        myOtherArray.splice(1,1); //removes just sunshine from array
+        //myOtherArray.splice(1,2); //would remove sunshine and snow from array
+        console.log(myOtherArray);
+
+
     </script>
 
 </body>
