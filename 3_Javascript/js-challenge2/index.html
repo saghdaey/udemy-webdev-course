@@ -18,8 +18,8 @@
         font-weight:bold;
     }
     #box{
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
         background-color: blue;
         display:none; 
         position: relative; 
@@ -57,7 +57,7 @@
             setTimeout(function(){
                 //circle or box with equal probability
                 if(Math.random()>0.5){
-                    document.getElementById("box").style.borderRadius="100px";
+                    document.getElementById("box").style.borderRadius="60px";
                 } else {
                     document.getElementById("box").style.borderRadius="0px";
                 }
