@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
-<!--Section 3 Javascript Challenge-->
+<!--Section 3 Javascript Challenge, parts1 and2. lecture 99 and 100-->
+<!--box appears on screen after random amount of time between 0-5seconds-->
+<!--user clicks on box. their reaction time appears. box reappears after again, it continues-->
 
 <style>
     #box{
@@ -19,20 +21,32 @@
 </style>
 
 <body>
+
+    <p>Your time: <span id="time"></span></p>
     <div id="box"></div> <!--make this box disappear on click-->
 
     <script type="text/javascript">
+
+        //difference between click time and created time = reaction time in milliseconds
+        var clickedTime;
+        var createdTime; //time when box is created 
+        var reactionTime; 
 
         function makeBox(){ //function to make box appear after a random amount of time
             var time=Math.random();
             time=time*5000;
             setTimeout(function(){
                 document.getElementById("box").style.display="block"; //block=standard for obj to appear
+                createdTime=Date.now();
             }, time); //function will be executed after this many milliseconds
         }
 
         makeBox();
         document.getElementById("box").onclick=function(){
+            clickedTime=Date.now();
+            reactionTime=(clickedTime-createdTime)/1000 //to get in seconds
+            //alert(reactionTime);
+            document.getElementById("time").innerHTML=reactionTime;
             this.style.display="none";
             makeBox();
         }
