@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning jQuery</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <!--could have also done <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+"-->
+
+	<!--in CSS, use # for id and . for class-->
+	<style>
+		#circle {
+			width:200px;
+			height:200px;
+			background-color:green;
+			border-radius:100px;
+		}
+		.square { 
+			width: 200px;
+			height:200px;
+			background-color: red;
+			margin-top:10px;
+
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id= "circle"></div>
+	<p>This is some text</p>
+	<iframe src="http://www.cnn.com"></iframe>
+	<div class="square"></div>
+	<div class="square"></div>
+	
+	<!--<script>
+	if(typeof jQuery)!="undefined"){ //typeof lets us compare variable even if it doesnt exist 
+		alert('jquery is installed');
+	} else{
+		alert('jquery is not installed')
+	}
+	</script> -->
+	<script>
+		$("#circle").click(function(){
+			//alert("Circle Clicked!");
+
+			//change text upon click:
+			//$("p").html("the text has been changed");
+
+			//alert text upon click
+			alert($("p").html());
+		});
+
+		$(".square").click(function(){
+			alert("Square Clicked!");
+		});
+
+		$(".square").hover(function(){
+			//$("p").html("you hovered over a square");
+			//alert embedded attribute when you hover over square
+			//source of embedded page will pop up 
+			//alert($("iframe").attr("src"));
+
+			//to change source attribute:
+			$("iframe").attr("src", "http://bbc.com");
+		});
+
+		
+		//can also use element type
+		/*
+		$("div").click(function(){
+			alert("div was clicked!");
+		});*/
+	</script>
+
+</body>
+</html>
